@@ -1,0 +1,54 @@
+#include <stdio.h>
+main () {
+int pilihansuhu;
+float celcius, fahrenheit, reamur;
+
+ printf("Konversi Suhu\nSuhu yang akan di konversi :\n1. Celcius\n2. Fahrenheit\n3. Reamur\n\nSuhu yang di pilih : ");
+scanf("%d", &pilihansuhu);
+
+switch (pilihansuhu)
+{
+case 1:
+    printf("\n\n");
+    printf("Masukkan Jumlah Suhu Dalam Celcius : ");
+    scanf("%g", &celcius);
+
+    fahrenheit = celcius*1.8+32;
+    reamur = celcius*0.8;
+
+    printf("Suhu Dalam Fahrenheit : %g\n", fahrenheit);
+    printf("Suhu Dalam Reamur     : %g\n", reamur);
+
+    break;
+
+case 2:
+    printf("\n\n");
+    printf("Masukkan Jumlah Suhu Dalam Fahrenheit : ");
+    scanf("%g", &fahrenheit);
+
+    celcius = (fahrenheit-32)/1.8;
+    reamur = (fahrenheit-32)/2.25;
+
+    printf("Suhu Dalam Celcius : %g\n", celcius);
+    printf("Suhu Dalam Reamur  : %g\n", reamur);
+
+    break;
+
+case 3:
+    printf("\n\n");
+    printf("Masukkan Jumlah Suhu Dalam Reamur : ");
+    scanf("%g", &reamur);
+
+    fahrenheit = reamur*2.25+32;
+    celcius = reamur/0.8;
+
+    printf("Suhu Dalam Celcius    : %g\n", celcius);
+    printf("Suhu Dalam Fahrenheit : %g\n", fahrenheit);
+
+
+
+}
+}
+
+
+
